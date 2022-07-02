@@ -16,7 +16,7 @@ import streamlit as st
 from PIL import Image
 import os
 
-st.set_page_config(page_title = 'Wyscout: Serie A Match Analysis', page_icon = Image.open('Serie_A_logo.jpg'))
+st.set_page_config(page_title = 'Wyscout: Serie A Match Analysis', page_icon = Image.open('Serie_A_logo.jpg'), initial_sidebar_state = 'expanded')
 
 font1 = font_manager.FontProperties(family = 'Tahoma')
 font = {'fontname':'Tahoma'}
