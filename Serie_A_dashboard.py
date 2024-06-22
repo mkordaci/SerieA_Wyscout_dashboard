@@ -338,7 +338,7 @@ def xg_chart():
 # Dashboard configuration
 # ==========================================================
 
-add_sidebar = st.sidebar.selectbox('Select Page', ('Intro','xG Flow Chart','Shot maps','Pass maps'))
+add_sidebar = st.sidebar.selectbox('Select Page', ('Intro','xG Flow Chart','Shot maps','Pass maps','tbl'))
 
 if add_sidebar == 'Intro':
     st.header("""
@@ -425,8 +425,33 @@ if add_sidebar == 'Pass maps':
         players2 = tuple(np.append('All', passes.loc[passes.team == 'Sampdoria']['player_name'].unique()))
         players2_select = st.selectbox('Select a player', (players2))
         passmap_plot(teams1_select, players2_select)
-        
 
+
+if add_sidebar == 'tbl':
+    dftable = pd.DataFrame(
+        {
+            "name": ["Roadmap", "Extras", "Issues"],
+            "url": ["https://roadmap.streamlit.app", "https://extras.streamlit.app", "https://issues.streamlit.app"],
+            "stars": [random.randint(0, 1000) for _ in range(3)],
+            "views_history": [[random.randint(0, 5000) for _ in range(30)] for _ in range(3)],
+        }
+    )
+    st.dataframe(
+        dftable,
+        column_config={
+            "name": "App name",
+            "stars": st.column_config.NumberColumn(
+                "Github Stars",
+                help="Number of stars on GitHub",
+                format="%d ⭐",
+            ),
+            "url": st.column_config.LinkColumn("App URL"),
+            "views_history": st.column_config.LineChartColumn(
+                "Views (past 30 days)", y_min=0, y_max=5000
+            ),
+        },
+        hide_index=True,
+    )
 
 
 
