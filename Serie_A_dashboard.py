@@ -162,7 +162,7 @@ def passmap_plot(team,player):
                  headlength = 10, 
                  color = 'aquamarine', 
                  ax = axs['pitch'],
-                 label = 'Completed')
+                 label = 'Başarılı')
 
     pitch.arrows(passes_filtered.loc[passes_filtered.accurate_pass == False].start_x, passes_filtered.loc[passes_filtered.accurate_pass == False].start_y, passes_filtered.loc[passes_filtered.accurate_pass == False].end_x, passes_filtered.loc[passes_filtered.accurate_pass == False].end_y, 
                  width = 2, 
@@ -171,7 +171,7 @@ def passmap_plot(team,player):
                  headaxislength = 12, 
                  color = 'tomato', 
                  ax = axs['pitch'],
-                 label = 'Failed')
+                 label = 'Başarısız')
                 
     if player == 'All':
         #plt.title(f'Juventus vs Sampdoria 20/09/2020: {team} pass map', color = 'white', size = 30)
