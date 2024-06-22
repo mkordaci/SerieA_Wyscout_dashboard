@@ -187,7 +187,7 @@ def passmap_plot(team,player):
     frame.set_facecolor('white')
     frame.set_edgecolor('white')
     
-    axs['endnote'].text(1,0.25,'@datawithed',color='white',alpha=0.5,va='center',ha='right',fontsize=20,)
+    axs['endnote'].text(1,0.25,'@kanalfutbol | www.kanalfutbol.com.tr',color='white',alpha=0.5,va='center',ha='right',fontsize=20,)
     
     st.pyplot(fig)
     
@@ -240,7 +240,7 @@ def shotmap_plot(team,player):
                            marker = 'football',
                            ax = ax)
     
-    ax.text(45.8, 82.6, '@datawithed', color = 'white', alpha = 0.5)
+    ax.text(45.8, 82.6, '@kanalfutbol | www.kanalfutbol.com.tr', color = 'white', alpha = 0.5)
     
     if player == 'All':
         txt = ax.text(x = 50, y = 65, s = f'Juventus vs Sampdoria 20/09/2020:\n {team} shot map', fontname = 'Tahoma', size = 20, va = 'center', ha = 'center', color = 'white')
@@ -321,7 +321,7 @@ def xg_chart():
     ax.spines['top'].set_color('#1E4966')
     ax.tick_params(axis='x', colors='white')    #setting up X-axis tick color to red
     ax.tick_params(axis='y', colors='white', labelright = True)
-    ax.text(40,2.5,'@datawithed', color = 'white', alpha = 0.5, size = 8)
+    ax.text(40,2.5,'@kanalfutbol | www.kanalfutbol.com.tr', color = 'white', alpha = 0.5, size = 8)
     fig.patch.set_facecolor('#1E4966')
     plt.xticks(np.arange(0,90+1,5))
     plt.xlabel('Minute', color = 'white',**font)
