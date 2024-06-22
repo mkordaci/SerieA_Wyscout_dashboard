@@ -4,6 +4,6 @@ numpy
 pandas
 plotly
 streamlit
-matplotlib
-matplotlib-inline
+matplotlib==3.4.3
+matplotlib-inline==0.1.2
 mplsoccer
