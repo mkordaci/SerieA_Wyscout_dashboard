@@ -437,7 +437,7 @@ if add_sidebar == 'tbl':
             "views_history": [[random.randint(0, 5000) for _ in range(30)] for _ in range(3)],
         }
     )
-    props = 'font-family: "Times New Roman", Times, serif; color: #e83e8c; font-size:1.3em;'
+    props = 'font-family: "Times New Roman", Times, serif; color: #e83e8c; font-size:5.3em;'
     st.table(
         dftable.style.set_table_styles([{'selector': 'td.col1', 'props': props}]),
         #column_config={
