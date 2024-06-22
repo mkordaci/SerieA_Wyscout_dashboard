@@ -438,7 +438,7 @@ if add_sidebar == 'tbl':
         }
     )
     st.dataframe(
-        dftable,
+        dftable.style,
         column_config={
             "name": "App name",
             "stars": st.column_config.NumberColumn(
