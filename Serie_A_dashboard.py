@@ -438,7 +438,13 @@ if add_sidebar == 'tbl':
         }
     )
     st.dataframe(
-        dftable.style,
+        dftable.style.set_table_styles(
+            [{"selector": "", "props": [("border", "1px solid grey")]},
+              {"selector": "tbody td", "props": [("border", "1px solid grey")]},
+             {"selector": "th", "props": [("border", "1px solid grey")]}
+            ]
+        )
+        ,
         column_config={
             "name": "App name",
             "stars": st.column_config.NumberColumn(
