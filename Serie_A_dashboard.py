@@ -439,9 +439,9 @@ if add_sidebar == 'tbl':
     )
     st.dataframe(
         dftable.style.set_table_styles(
-            [{"selector": "", "props": [("border", "1px solid grey")]},
-              {"selector": "tbody td", "props": [("border", "1px solid grey")]},
-             {"selector": "th", "props": [("border", "1px solid grey")]}
+            [{"selector": "", "props": [("border", "10px solid grey")]},
+              {"selector": "tbody td", "props": [("border", "10px solid grey")]},
+             {"selector": "th", "props": [("border", "10px solid grey")]}
             ]
         )
         ,
