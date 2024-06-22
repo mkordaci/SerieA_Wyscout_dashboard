@@ -15,6 +15,7 @@ from mplsoccer import Pitch, VerticalPitch
 import streamlit as st
 from PIL import Image
 import os
+import random
 
 st.set_page_config(page_title = 'Wyscout: Serie A Match Analysis', page_icon = Image.open('Serie_A_logo.jpg'), initial_sidebar_state = 'expanded')
 
