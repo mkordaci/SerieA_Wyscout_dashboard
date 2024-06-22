@@ -433,12 +433,13 @@ if add_sidebar == 'tbl':
         {
             "name": ["Roadmap", "Extras", "Issues"],
             "url": ["https://roadmap.streamlit.app", "https://extras.streamlit.app", "https://issues.streamlit.app"],
-            "stars": [random.randint(0, 1000) for _ in range(3)],
+            "stars": [random.randint(-1000, 1000) for _ in range(3)],
             "views_history": [[random.randint(0, 5000) for _ in range(30)] for _ in range(3)],
         }
     )
+    props = 'font-family: "Times New Roman", Times, serif; color: #e83e8c; font-size:1.3em;'
     st.dataframe(
-        dftable.style.format(precision=3, thousands=".", decimal=",").format_index(str.upper, axis=1).relabel_index(["row 1", "row 2"], axis=0),
+        dftable.style.set_table_styles([{'selector': 'td.col1', 'props': props}]),
         column_config={
             "name": "App name",
             "stars": st.column_config.NumberColumn(
