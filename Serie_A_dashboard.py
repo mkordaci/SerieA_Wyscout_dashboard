@@ -235,7 +235,7 @@ def shotmap_plot(team,player):
                            # Size varies based on xG
                            s = (goals_filtered.xG * 1900) + 100,
                            edgecolors = '#b94b75',
-                           linewidth = 0.6,
+                           #linewidth = 0.6,
                            c = 'white',
                            marker = 'football',
                            ax = ax)
