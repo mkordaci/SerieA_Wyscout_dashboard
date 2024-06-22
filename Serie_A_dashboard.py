@@ -438,7 +438,7 @@ if add_sidebar == 'tbl':
         }
     )
     props = 'font-family: "Times New Roman", Times, serif; color: #e83e8c; font-size:1.3em;'
-    st.dataframe(
+    st.table(
         dftable.style.set_table_styles([{'selector': 'td.col1', 'props': props}]),
         column_config={
             "name": "App name",
