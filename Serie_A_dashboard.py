@@ -139,7 +139,7 @@ shot_data = shot_data.reset_index(drop = True)
 
 # Draw passmap using mplsoccer library
 def passmap_plot(team,player):
-    pitch = Pitch(pitch_type='wyscout', pitch_color = '#1E4966', line_color = '#c7d5cc', figsize = (16,11))
+    pitch = Pitch(pitch_type='wyscout', orientation = 'horizontal', pitch_color = '#1E4966', line_color = '#c7d5cc', figsize = (16,11))
     fig, axs = pitch.grid(endnote_height = 0.03, 
                           endnote_space = 0, 
                           figheight = 16, 
