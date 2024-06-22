@@ -440,19 +440,19 @@ if add_sidebar == 'tbl':
     props = 'font-family: "Times New Roman", Times, serif; color: #e83e8c; font-size:1.3em;'
     st.table(
         dftable.style.set_table_styles([{'selector': 'td.col1', 'props': props}]),
-        column_config={
-            "name": "App name",
-            "stars": st.column_config.NumberColumn(
-                "Github Stars",
-                help="Number of stars on GitHub",
-                format="%d ⭐",
-            ),
-            "url": st.column_config.LinkColumn("App URL"),
-            "views_history": st.column_config.LineChartColumn(
-                "Views (past 30 days)", y_min=0, y_max=5000
-            ),
-        },
-        hide_index=True,
+        #column_config={
+        #    "name": "App name",
+        #    "stars": st.column_config.NumberColumn(
+        #        "Github Stars",
+        #        help="Number of stars on GitHub",
+        #        format="%d ⭐",
+        #    ),
+        #    "url": st.column_config.LinkColumn("App URL"),
+        #    "views_history": st.column_config.LineChartColumn(
+        #        "Views (past 30 days)", y_min=0, y_max=5000
+        #    ),
+        #},
+        #hide_index=True,
     )
 
 
