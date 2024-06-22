@@ -6,4 +6,4 @@ plotly
 streamlit
 matplotlib
 matplotlib-inline
-mplsoccer==1.0.6
+mplsoccer
